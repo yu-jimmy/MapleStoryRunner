@@ -16,6 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Global="*res://Scenes/Global.tscn"
 Signals="*res://Scripts/Signals.gd"
 
 [input]

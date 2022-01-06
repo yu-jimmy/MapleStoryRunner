@@ -1,7 +1,4 @@
 extends Label
 
-func _ready():
-	Signals.connect("updatescore",self,"updatescore")
-	
-func updatescore(score):
-	self.text = String(score)
+func _process(delta):
+	get_node(".").text = str(Global.current_score)
