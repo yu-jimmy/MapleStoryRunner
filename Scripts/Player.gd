@@ -3,7 +3,7 @@ extends KinematicBody2D
 var velocity = Vector2.ZERO
 
 export var jump_velocity = 600.0
-export var gravity_scale = 20.0
+export var gravity_scale = 30.0
 
 var score = 0
 
@@ -18,6 +18,7 @@ var state = RUN
 onready var animation = $AnimatedSprite
 
 func _ready():
+	Global.current_score = 0
 	Signals.connect("rewardplayer", self, "rewardplayer")
 	Signals.connect("killplayer", self, "killplayer")
 
