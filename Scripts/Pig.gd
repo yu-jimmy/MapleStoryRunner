@@ -2,7 +2,7 @@ extends "ScrollMovement.gd"
 
 func _physics_process(delta):
 	move()
-
+	$AnimationPlayer.play("Run")
 
 func _on_EffectDamage_body_entered(body):
 	if body.name == "Player":

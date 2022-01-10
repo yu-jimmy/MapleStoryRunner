@@ -21,6 +21,7 @@ func _ready():
 	Global.current_score = 0
 	Signals.connect("rewardplayer", self, "rewardplayer")
 	Signals.connect("killplayer", self, "killplayer")
+	Engine.time_scale = 1
 
 func _physics_process(delta):
 	match state:
@@ -52,7 +53,6 @@ func _on_Area2D_body_exited(body):
 
 func rewardplayer(scoreToAdd):
 	score += scoreToAdd
-	Signals.emit_signal("upatescore",score)
 	print(score)
 
 func killplayer():

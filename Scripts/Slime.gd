@@ -2,7 +2,7 @@ extends "ScrollMovement.gd"
 
 func _physics_process(delta):
 	move()
-
+	$AnimationPlayer.play("Run")
 
 func _on_EffectDamage_body_entered(body):
 	if body.name == "Player":
@@ -12,4 +12,5 @@ func _on_EffectDamage_body_entered(body):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	Signals.emit_signal("rewardplayer", 1)
+	Global.current_score += 1
 	queue_free()

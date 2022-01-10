@@ -22,7 +22,7 @@ margin_left = -5.33486
 margin_top = -1.89628
 margin_right = 398.665
 margin_bottom = 314.104
-rect_scale = Vector2( 2.27746, 1.83387 )
+rect_scale = Vector2( 0.478693, 0.534695 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
