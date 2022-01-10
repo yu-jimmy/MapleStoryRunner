@@ -1,14 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Sprites/MapleStory.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Fonts/PTSerif-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/TitleScreen.gd" type="Script" id=3]
-
-[sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
 
 [node name="TitleScreen" type="Control"]
 rect_scale = Vector2( 1.12468, 1.0547 )
@@ -29,27 +22,26 @@ __meta__ = {
 }
 
 [node name="HighScore" type="Label" parent="."]
-margin_left = 376.996
-margin_top = 382.1
-margin_right = 456.996
-margin_bottom = 404.1
+margin_left = 384.109
+margin_top = 382.099
+margin_right = 464.109
+margin_bottom = 404.099
 rect_scale = Vector2( 1.73677, 2.28028 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
 text = "High score:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 269.41
-margin_top = 287.286
-margin_right = 405.41
-margin_bottom = 309.286
+margin_left = 274.745
+margin_top = 217.123
+margin_right = 401.745
+margin_bottom = 264.123
 rect_scale = Vector2( 2.86559, 3.39234 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Press enter to start"
+text = "Press Enter To Start
+    Space To Jump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
