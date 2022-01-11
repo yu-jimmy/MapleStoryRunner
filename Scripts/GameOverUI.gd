@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	Signals.connect("killplayer",self,"gameover")
+	Signals.connect("endgame",self,"gameover")
 
 
 func _on_Button_pressed():

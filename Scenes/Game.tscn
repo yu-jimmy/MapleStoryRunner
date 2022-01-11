@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Foreground.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Scenes/ScoreUI.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/GameOverUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Cake.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/PowerUpSpawner.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/SilverManePU.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Audio/[MapleStory BGM] Orbis - Upon the Sky.wav" type="AudioStream" id=12]
 
 [node name="Game" type="Node2D"]
 
@@ -21,10 +24,19 @@ position = Vector2( 79, 512 )
 jump_velocity = 800.0
 
 [node name="Spawner" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1037, 523 )
+position = Vector2( 1025, 522 )
 scenes = [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 9 ) ]
+
+[node name="PowerUpSpawner" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1026, 348 )
+scenes = [ ExtResource( 11 ) ]
 
 [node name="ScoreUI" parent="." instance=ExtResource( 7 )]
 
 [node name="GameOverUI" parent="." instance=ExtResource( 8 )]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -27.217
+autoplay = true
